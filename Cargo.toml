@@ -1,0 +1,12 @@
+[package]
+name = "cracker"
+version = "0.1.0"
+edition = "2021"
+description = "Reverses Minecraft seed strings from a given seed with regex patterns"
+
+[dependencies]
+anyhow = "1.0.58"
+clap = { version = "3.2.12", features = ["derive"] }
+rand = { version = "0.8.5", features = ["small_rng"] }
+rand_regex = "0.15.1"
+regex-syntax = "0.6.27"
