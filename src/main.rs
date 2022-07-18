@@ -45,7 +45,7 @@ struct Args {
 
     /// Seed to compare against
     #[clap(short, long)]
-    seed: usize,
+    seed: i32,
 
     /// Gives the maximum extra repeat counts the x*, x+ and x{n,} operators will become
     #[clap(short, long, default_value = "100")]
@@ -56,10 +56,10 @@ struct Args {
     sample: bool,
 }
 
-fn java_hashcode(string: &str) -> usize {
+fn java_hashcode(string: &str) -> i32 {
     let mut hash = Wrapping(0);
     for ch in string.chars() {
-        hash = Wrapping(31) * hash + Wrapping(ch as usize);
+        hash = Wrapping(31) * hash + Wrapping(ch as i32);
     }
     hash.0
 }
