@@ -24,7 +24,7 @@ fn main() -> Result<()> {
                 let seed_string: String = (&mut rng).sample(&gen);
                 let seed = java_hashcode(&seed_string);
                 if seed == args.seed {
-                    println!("{seed_string}");
+                    println!("Found seed: {seed_string}");
                 }
             }
         });
